@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Kunder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Bestilling av kinobilletter</h1>
+            <form class="form" id="fyllUt">
+                <div class="form-group">
+                    <label for="film">Velg film:</label>
+                    <select name="film" id="film" class="form-control">
+                        <option value="default">Velg film her:</option>
+                        <option value="The Matrix">The Matrix</option>
+                        <option value="Interstellar">Interstellar</option>
+                        <option value="Pirates of the Caribbean">Pirates of the Caribbean</option>
+                    </select>
+                    <div id="velgFilm"></div><br>
+                </div>
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label for="antall">Antall</label></td>
+                            <td><input type="number" id="antall" class="form-control"></td>
+                            <td><div id="skrivAntall"></div></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <br><td>Fornavn</td>
+                            <td><input type="text" id="fNavn" value="" class="form-control"></td>
+                            <td><div id="output0"></div></td>
+                        </tr>
+                        <tr>
+                            <td>Etternavn</td>
+                            <td><input type="text" id="eNavn" value="" class="form-control"></td>
+                            <td><div id="output1"></div></td>
+                        </tr>
+                        <tr>
+                            <td>Telefonnr</td>
+                            <td><input type="number" id="tlfnr" value="" class="form-control"></td>
+                            <td><div id="output2"></div></td>
+                        </tr>
+                        <tr>
+                            <td>Epost</td>
+                            <td><input type="text" id="epost" value="" class="form-control"></td>
+                            <td><div id="output3"></div></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+            <button onclick="regKunde()" class="btn btn-primary">Kjøp billett</button><br/>
+        </div>
+        <div class="col-md-8">
+            <h2>Alle billetter</h2>
+            <div id="alleBilletter" class = "row">
+            </div>
+            <button id="slettInfo" class="btn btn-danger">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
